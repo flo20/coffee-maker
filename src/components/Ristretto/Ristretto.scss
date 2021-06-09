@@ -1,11 +1,25 @@
 @import "./../../styles/sass/variables.scss";
 
 .ristretto-container{
-    width: 50%;
-    height: 3rem;
-    background: $primary-shade-light;
-    border-radius: 6px;
-    text-align: center;
-    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
+
+.ristretto-button{
+    width: 343px;
+    height: 94px;
+    background: $primary-shade-light;
+    border: none;
+    text-align: center;
+    padding: 4px;
+    margin-bottom: 1rem ;
+}
+
+.ristretto-font{
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+}
