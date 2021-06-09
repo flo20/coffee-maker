@@ -1,29 +1,61 @@
-import React from "react";
-// import axios from "axios";
+import React, {useState} from "react";
+import axios from "axios";
+import Header from "../Header/Header";
+// import coffeData from "../../mock/coffe-data.json";
 import "./Ristretto.scss";
 
 function Ristretto() {
-//   const getRistrettoCoffee = async () => {
-//     try {
-//       const data = await axios.get("https://darkroastedbeans.coffeeit.nl/coffee-machine/60ba0ad8493d9eac4811a9a6");
-//       console.log("Coffee", data);
-//     } catch (error) {
-//       console.error(error);
-//     }
-//   };
+  const []
+  const getRistrettoCoffee = async () => {
+    try {
+      const { data } = await axios.get("https://darkroastedbeans.coffeeit.nl/coffee-machine/60ba1ab72e35f2d9c786c610");
+      console.log("Coffee", data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
-  //   getRistrettoCoffee();
+  getRistrettoCoffee();
   const getCoffeeType = () => {
     console.log("Got your coffee!");
   };
 
   return (
-    <div>
-      <button type="submit" onClick={getCoffeeType} className="ristretto-container">
-        <p className="ristretto-font">Ristretto</p>
-      </button>
-    </div>
-
+    <>
+      <Header />
+      <div className="ristretto-container">
+        <div>
+          <button type="submit" onClick={getCoffeeType} className="ristretto-button">
+            <p className="ristretto-font">Ristretto</p>
+          </button>
+        </div>
+        <div>
+          <button type="submit" onClick={getCoffeeType} className="ristretto-button">
+            <p className="ristretto-font">Cappuccino</p>
+          </button>
+        </div>
+        <div>
+          <button type="submit" onClick={getCoffeeType} className="ristretto-button">
+            <p className="ristretto-font">Espresso</p>
+          </button>
+        </div>
+        <div>
+          <button type="submit" onClick={getCoffeeType} className="ristretto-button">
+            <p className="ristretto-font">Americano</p>
+          </button>
+        </div>
+        <div>
+          <button type="submit" onClick={getCoffeeType} className="ristretto-button">
+            <p className="ristretto-font">Lungo</p>
+          </button>
+        </div>
+        <div>
+          <button type="submit" onClick={getCoffeeType} className="ristretto-button">
+            <p className="ristretto-font">Latte Machiatto</p>
+          </button>
+        </div>
+      </div>
+    </>
   );
 }
 
