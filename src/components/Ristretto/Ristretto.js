@@ -13,9 +13,13 @@ function Ristretto() {
 //   };
 
   //   getRistrettoCoffee();
+  const getCoffeeType = () => {
+      console.log("Got your coffee!");
+  }
+
   return (
-    <div className>
-      <p>Ristretto</p>
+    <div className="ristretto-container" onClick={getCoffeeType}>
+      <p className="ristretto-font">Ristretto</p>
     </div>
 
   );
