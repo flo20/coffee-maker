@@ -14,12 +14,14 @@ function Ristretto() {
 
   //   getRistrettoCoffee();
   const getCoffeeType = () => {
-      console.log("Got your coffee!");
-  }
+    console.log("Got your coffee!");
+  };
 
   return (
-    <div className="ristretto-container" onClick={getCoffeeType}>
-      <p className="ristretto-font">Ristretto</p>
+    <div>
+      <button type="submit" onClick={getCoffeeType} className="ristretto-container">
+        <p className="ristretto-font">Ristretto</p>
+      </button>
     </div>
 
   );
