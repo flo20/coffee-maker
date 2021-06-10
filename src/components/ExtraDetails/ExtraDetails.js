@@ -6,7 +6,7 @@ const ExtraDetails = () => (
   <div>
     <Headings pageHeading="Brew with Lex" pageSubHeading="Select your extra’s" />
     <MilkEtras milkInfo="Milk" Dairy="Dairy" Soy="Soy" Oat="Oat" />
-    <CoffeeContainer coffeeInfo="Sugar" linkPaths="/extra-details" />
+    <CoffeeContainer coffeeInfo="Sugar" linkPaths="/sugar-details" />
 
   </div>
 );
