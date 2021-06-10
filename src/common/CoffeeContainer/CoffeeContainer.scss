@@ -1,14 +1,13 @@
 @import "./../../styles/sass/variables.scss";
 
-.ristretto-container{
+.coffee-container{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-
-.ristretto-button{
+.coffee-button{
     width: 343px;
     height: 94px;
     background: $primary-shade-light;
@@ -18,7 +17,7 @@
     margin-bottom: 1rem ;
 }
 
-.ristretto-font{
+.coffee-font{
     color: #ffffff;
     font-weight: 600;
     font-size: 18px;

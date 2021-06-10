@@ -1,21 +1,19 @@
 import React from "react";
-// import Cappuccino from "./components/Cappuccino/Cappuccino";
-// import Espresso from "./components/Espresso/Espresso";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Ristretto from "./components/Ristretto/Ristretto";
+import Home from "./components/Home/Home";
 import CoffeeSize from "./components/CoffeeSize/CoffeeSize";
+import CoffeeExtras from "./components/CoffeeExtras/CoffeeExtras";
+import MilkExtras from "./components/ExtraDetails/ExtraDetails";
 
 function App() {
   return (
     <div>
-      {/* <Cappuccino /> */}
-      <Ristretto />
-      {/* <Espresso /> */}
-
       <Router>
         <Switch>
-          {/* <Route exact path="/" component={Home} /> */}
-          <Route exact path="/size" component={CoffeeSize} />
+          <Route exact path="/" component={Home} />
+          <Route path="/size" component={CoffeeSize} />
+          <Route path="/extra" component={CoffeeExtras} />
+          <Route path="/extra-details" component={MilkExtras} />
         </Switch>
       </Router>
     </div>

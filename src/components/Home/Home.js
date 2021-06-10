@@ -1,12 +1,14 @@
 import React from "react";
 import axios from "axios";
-import Header from "../Header/Header";
 
-import "./Ristretto.scss";
+import Headings from "../../common/Headings/Headings";
+
+import "./Home.scss";
+import CoffeeContainer from "../../common/CoffeeContainer/CoffeeContainer";
 
 function Ristretto() {
   // const [coffeList, setCoffeList] = useState([]);
-  const getRistrettoCoffee = async () => {
+  const getCoffeeType = async () => {
     try {
       const { data } = await axios.get("https://darkroastedbeans.coffeeit.nl/coffee-machine/60ba1ab72e35f2d9c786c610");
       console.log("Coffee", data);
@@ -16,14 +18,17 @@ function Ristretto() {
     }
   };
 
-  getRistrettoCoffee();
-  const getCoffeeType = () => {
-    console.log("Got your coffee!");
-  };
+  getCoffeeType();
+  // const saveCoffeeType = () => {
+  //   console.log("Got your coffee!");
+  // };
 
   return (
     <>
-      <Header />
+      <Headings
+        pageHeading="Brew with Lex"
+        pageSubHeading="Select your style"
+      />
       {/* {coffeList && coffeList.map((coffee) => (
         <div className="ristretto-container" key={coffee.name}>
           <button type="submit" onClick={getCoffeeType} className="ristretto-button">
@@ -31,11 +36,12 @@ function Ristretto() {
           </button>
         </div>
       ))} */}
-      <div className="ristretto-container">
-        <button type="submit" onClick={getCoffeeType} className="ristretto-button">
-          <p className="ristretto-font">Ristretto</p>
-        </button>
-      </div>
+
+      <CoffeeContainer
+        linkPaths="/size"
+        coffeeInfo="Ristretto"
+      />
+
     </>
   );
 }
