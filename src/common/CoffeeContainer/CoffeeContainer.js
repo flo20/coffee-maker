@@ -5,10 +5,11 @@ import { Link } from "react-router-dom";
 
 import "./CoffeeContainer.scss";
 
-const CoffeeContainer = ({ coffeeInfo, linkPaths }) => (
+const CoffeeContainer = ({ coffeeInfo, linkPaths, coffeeIcon }) => (
   <div className="coffee-container">
     <Link to={linkPaths}>
       <button type="submit" className="coffee-button">
+        {coffeeIcon}
         <p className="coffee-font">{coffeeInfo}</p>
       </button>
     </Link>
@@ -59,6 +60,7 @@ export const MilkEtras = ({
 
 CoffeeContainer.propTypes = {
   coffeeInfo: PropTypes.string,
+  coffeeIcon: PropTypes.node,
   linkPaths: PropTypes.string,
 };
 

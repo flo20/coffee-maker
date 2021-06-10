@@ -1,10 +1,11 @@
 import React from "react";
-import axios from "axios";
 
+import axios from "axios";
+import { BiCoffeeTogo } from "react-icons/bi";
 import Headings from "../../common/Headings/Headings";
+import CoffeeContainer from "../../common/CoffeeContainer/CoffeeContainer";
 
 import "./Home.scss";
-import CoffeeContainer from "../../common/CoffeeContainer/CoffeeContainer";
 
 function Ristretto() {
   // const [coffeList, setCoffeList] = useState([]);
@@ -40,6 +41,7 @@ function Ristretto() {
       <CoffeeContainer
         linkPaths="/size"
         coffeeInfo="Ristretto"
+        coffeeIcon={<BiCoffeeTogo />}
       />
 
     </>
