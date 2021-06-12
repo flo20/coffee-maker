@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./components/Home/Home";
 import CoffeeSize from "./components/CoffeeSize/CoffeeSize";
 import CoffeeExtras from "./components/CoffeeExtras/CoffeeExtras";
-import MilkExtras from "./components/ExtraDetails/ExtraDetails";
+import MilkExtras from "./components/MilkExtras/MilkExtras";
+import SugarExtras from "./components/SugarExtras/SugarExtras";
 import StartCoffee from "./components/StartCoffee/StartCoffee";
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
           <Route path="/home" component={Home} />
           <Route path="/size" component={CoffeeSize} />
           <Route path="/extra" component={CoffeeExtras} />
-          <Route path="/extra-details" component={MilkExtras} />
+          <Route path="/milk-details" component={MilkExtras} />
+          <Route path="/sugar-details" component={SugarExtras} />
         </Switch>
       </Router>
     </div>

@@ -12,14 +12,14 @@ const CoffeeExtras = () => (
     />
 
     <CoffeeContainer
-      coffeeIcon={<GiIceCubes />}
-      coffeeInfo="Sugar"
-      linkPaths="/extra-details"
-    />
-    <CoffeeContainer
       coffeeIcon={<GiMilkCarton />}
       coffeeInfo="Milk"
-      linkPaths="/extra-details"
+      linkPaths="/milk-details"
+    />
+    <CoffeeContainer
+      coffeeIcon={<GiIceCubes />}
+      coffeeInfo="Sugar"
+      linkPaths="/sugar-details"
     />
   </div>
 );
