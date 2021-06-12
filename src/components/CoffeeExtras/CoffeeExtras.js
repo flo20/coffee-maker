@@ -10,6 +10,7 @@ const CoffeeExtras = () => (
       pageHeading="Brew with Lex"
       pageSubHeading="Select your extra’s"
     />
+
     <CoffeeContainer
       coffeeIcon={<GiMilkCarton />}
       coffeeInfo="Milk"

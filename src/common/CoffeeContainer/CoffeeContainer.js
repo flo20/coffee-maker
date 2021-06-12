@@ -1,5 +1,6 @@
+/* eslint-disable max-len */
 /* eslint-disable react/require-default-props */
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
@@ -16,47 +17,47 @@ const CoffeeContainer = ({ coffeeInfo, linkPaths, coffeeIcon }) => (
   </div>
 );
 
-export const MilkEtras = ({
-  milkInfo, Dairy, Soy, Oat,
-}) => {
-  const [milkOption, setMilkOption] = useState("");
+// export const MilkEtras = ({
+//   milkInfo, Dairy, Soy, Oat,
+// }) => {
+//   const [milkOption, setMilkOption] = useState("");
 
-  const handleMilkChange = (event) => {
-    setMilkOption(event.target.value);
-  };
+//   const handleMilkChange = (event) => {
+//     setMilkOption(event.target.value);
+//   };
 
-  return (
-    <div className="milk-container">
-      <div className="milk-wrapper">
-        <p>{milkInfo}</p>
-        <li className="milk-radio">
-          <label htmlFor="1" className="milk-text">
-            {Dairy}
-          </label>
-          <input id="1" type="radio" value="dairy" checked={milkOption === "dairy"} onChange={handleMilkChange} />
+//   return (
+//     <div className="milk-container">
+//       <div className="milk-wrapper">
+//         <p>{milkInfo}</p>
+//         <li className="milk-radio">
+//           <label htmlFor="1" className="milk-text">
+//             {Dairy}
+//           </label>
+//           <input id="1" type="radio" value="dairy" checked={milkOption === "dairy"} onChange={handleMilkChange} />
 
-        </li>
-        <li className="milk-radio">
-          <label htmlFor="2">
-            {Soy}
+//         </li>
+//         <li className="milk-radio">
+//           <label htmlFor="2">
+//             {Soy}
 
-          </label>
-          <input id="2" type="radio" value="soy" checked={milkOption === "soy"} onChange={handleMilkChange} />
+//           </label>
+//           <input id="2" type="radio" value="soy" checked={milkOption === "soy"} onChange={handleMilkChange} />
 
-        </li>
-        <li className="milk-radio">
-          <label htmlFor="2">
-            {Oat}
-          </label>
-          <input id="2" type="radio" value="oat" checked={milkOption === "oat"} onChange={handleMilkChange} />
+//         </li>
+//         <li className="milk-radio">
+//           <label htmlFor="2">
+//             {Oat}
+//           </label>
+//           <input id="2" type="radio" value="oat" checked={milkOption === "oat"} onChange={handleMilkChange} />
 
-        </li>
-      </div>
+//         </li>
+//       </div>
 
-    </div>
+//     </div>
 
-  );
-};
+//   );
+// };
 
 CoffeeContainer.propTypes = {
   coffeeInfo: PropTypes.string,
@@ -64,11 +65,11 @@ CoffeeContainer.propTypes = {
   linkPaths: PropTypes.string,
 };
 
-MilkEtras.propTypes = {
-  milkInfo: PropTypes.string,
-  Dairy: PropTypes.string,
-  Soy: PropTypes.string,
-  Oat: PropTypes.string,
+// MilkEtras.propTypes = {
+//   milkInfo: PropTypes.string,
+//   Dairy: PropTypes.string,
+//   Soy: PropTypes.string,
+//   Oat: PropTypes.string,
+// };
 
-};
 export default CoffeeContainer;
