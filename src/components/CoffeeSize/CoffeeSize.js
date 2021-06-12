@@ -5,6 +5,7 @@ import CoffeeContainer from "../../common/CoffeeContainer/CoffeeContainer";
 
 const CoffeeSize = () => {
   const [coffeSize, setCoffeeSize] = useState([]);
+
   useEffect(() => {
     const getCoffeeType = async () => {
       try {
@@ -18,6 +19,7 @@ const CoffeeSize = () => {
 
     getCoffeeType();
   }, []);
+
   return (
     <div>
       <Headings pageHeading="Brew with Lex" pageSubHeading="Select your size" />

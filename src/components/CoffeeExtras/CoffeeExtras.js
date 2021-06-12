@@ -10,15 +10,16 @@ const CoffeeExtras = () => (
       pageHeading="Brew with Lex"
       pageSubHeading="Select your extra’s"
     />
-    <CoffeeContainer
-      coffeeIcon={<GiMilkCarton />}
-      coffeeInfo="Milk"
-      linkPaths="/milk-details"
-    />
+
     <CoffeeContainer
       coffeeIcon={<GiIceCubes />}
       coffeeInfo="Sugar"
-      linkPaths="/sugar-details"
+      linkPaths="/extra-details"
+    />
+    <CoffeeContainer
+      coffeeIcon={<GiMilkCarton />}
+      coffeeInfo="Milk"
+      linkPaths="/extra-details"
     />
   </div>
 );
