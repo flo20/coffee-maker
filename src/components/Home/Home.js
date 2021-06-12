@@ -1,36 +1,24 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-import axios from "axios";
 import { BiCoffeeTogo } from "react-icons/bi";
 import Headings from "../../common/Headings/Headings";
 import CoffeeContainer from "../../common/CoffeeContainer/CoffeeContainer";
 
+import { machineLex } from "../../config/coffee-machine-id.json";
+import useCoffee from "../../common/customHooks/useCoffee";
+
 import "./Home.scss";
 
 function Ristretto() {
-  const [coffeList, setCoffeList] = useState([]);
-
-  useEffect(() => {
-    const getCoffeeType = async () => {
-      try {
-        const { data } = await axios.get("https://darkroastedbeans.coffeeit.nl/coffee-machine/60ba1ab72e35f2d9c786c610");
-        console.log("Coffee", data);
-        setCoffeList(data.types);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    getCoffeeType();
-  }, []);
+  const coffeeList = useCoffee(machineLex, "types");
 
   return (
-    <>
+    <div>
       <Headings
         pageHeading="Brew with Lex"
         pageSubHeading="Select your style"
       />
-      {coffeList && coffeList.map((coffee) => (
+      {coffeeList && coffeeList.map((coffee) => (
         <div className="ristretto-container" key={coffee.name}>
           <CoffeeContainer
             linkPaths="/size"
@@ -40,7 +28,7 @@ function Ristretto() {
         </div>
       ))}
 
-    </>
+    </div>
   );
 }
 

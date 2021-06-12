@@ -13,8 +13,8 @@ const SugarExtras = () => {
     const getCoffeeType = async () => {
       try {
         const { data } = await axios.get("https://darkroastedbeans.coffeeit.nl/coffee-machine/60ba1ab72e35f2d9c786c610");
-        console.log("Milk", data.extras[0]);
-        console.log("Milk", data.extras[0].subselections);
+        // console.log("Milk", data.extras[0]);
+        // console.log("Milk", data.extras[0].subselections);
         setExtraInfo(data.extras[0]);
         setSugarOption(data.extras[0].subselections);
       } catch (error) {
@@ -32,20 +32,23 @@ const SugarExtras = () => {
   return (
     <div>
       <Headings pageHeading="Brew with Lex" pageSubHeading="Select your extra’s" />
-      <p>{extraInfo.name}</p>
-      {sugarOption && sugarOption.map((selections) => (
-        <div key={selections.name}>
-          <li>{selections.name}</li>
-          <input
-            type="radio"
-            name="extra-option"
-            value={selections.name}
-            checked={extraOption === selections.name}
-            onChange={handleOptionChange}
-          />
+      <div className="milk-container">
+        <div className="milk-wrapper">
+          <p>{extraInfo.name}</p>
+          {sugarOption && sugarOption.map((sugar) => (
+            <div key={sugar.name} className="milk-radio">
+              <li>{sugar.name}</li>
+              <input
+                type="radio"
+                name="extra-option"
+                value={sugar.name}
+                checked={extraOption === sugar.name}
+                onChange={handleOptionChange}
+              />
+            </div>
+          ))}
         </div>
-      ))}
-
+      </div>
       <CoffeeContainer
         coffeeIcon={<GiMilkCarton />}
         coffeeInfo="Milk"
@@ -53,28 +56,5 @@ const SugarExtras = () => {
       />
     </div>
   );
-  // return (
-  //   <div>
-  //     <Headings pageHeading="Brew with Lex" pageSubHeading="Select your extra’s" />
-  //     {milkType && milkType.map((milk) => (
-  //       <div key={milk.name}>
-  //         <p>{milk.name}</p>
-  //         {milk.subselections.map((type) => (
-  //           <div key={type.name}>
-  //             <li>{type.name}</li>
-  //             <input
-  //               type="radio"
-  //               name="extra-option"
-  //               value={type.name}
-  //               checked={extraOption === type.name}
-  //               onChange={handleOptionChange}
-  //             />
-  //           </div>
-  //         ))}
-
-  //       </div>
-  //     ))}
-  //   </div>
-  // );
 };
 export default SugarExtras;

@@ -1,0 +1,29 @@
+@import "./../../styles/sass/variables.scss";
+
+.milk-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+
+    .milk-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 343px;
+        background: $primary-shade-light;
+        margin-bottom: 1rem ;
+        border-radius: 4px;
+    }
+
+    .milk-radio{
+        width: 301px;
+        height: 56px;
+        background: rgba(124, 124, 124, 0.2);;
+        margin: 0.5rem;
+        border-radius: 8px;
+        text-align: center;  
+    }
+}
