@@ -41,32 +41,34 @@ const MilkExtras = () => {
           pageHeading="Brew with Lex"
           pageSubHeading="Select your extra’s"
         />
-        <div className="milk-container">
-          <div className="milk-wrapper">
-            <p>
-              {milkInfo.name}
-            </p>
-            {milkOption && milkOption.map((milk) => (
-              <div key={milk.name} className="milk-radio">
-                <li className="milk-text">{milk.name}</li>
-                <input
-                  type="radio"
-                  name="extra-option"
-                  value={milk.name}
-                  checked={checkedMilkOption === milk.name}
-                  onChange={handleOptionChange}
-                  className="custom-radio"
-                />
-              </div>
-            ))}
-          </div>
+
+        <div className="milk-wrapper">
+          <p>
+            {milkInfo.name}
+          </p>
+
+          {milkOption && milkOption.map((milk) => (
+            <div key={milk.name} className="milk-radio">
+              <li className="milk-text">{milk.name}</li>
+              <input
+                type="radio"
+                name="extra-option"
+                value={milk.name}
+                checked={checkedMilkOption === milk.name}
+                onChange={handleOptionChange}
+                className="custom-radio"
+              />
+            </div>
+          ))}
+        </div>
+        <div>
+          <CoffeeContainer
+            coffeeIcon={<GiIceCubes />}
+            coffeeInfo="Sugar"
+            linkPaths="/sugar-details"
+          />
         </div>
 
-        <CoffeeContainer
-          coffeeIcon={<GiIceCubes />}
-          coffeeInfo="Sugar"
-          linkPaths="/sugar-details"
-        />
       </Flex>
 
     </div>

@@ -6,11 +6,12 @@
         align-items: center;
         flex-direction: column;
         width: $button-width;
+        height: $extra-box-height;
         background: $primary-color;
-        margin-bottom: 1rem ;
         border-radius: 4px;
         list-style: none;
         color: $font-colors;
+        margin-bottom: 1rem;
     }
 
     .milk-radio{
@@ -24,6 +25,12 @@
         border-radius: 8px;
         text-align: center;  
     }
+
+    .milk-info{
+       line-height: 5rem;
+    }
+
+    // Radio buttons
 
     input[type='radio']:after {
         width: 15px;

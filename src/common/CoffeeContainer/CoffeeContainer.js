@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import "./CoffeeContainer.scss";
 
 const CoffeeContainer = ({ coffeeInfo, linkPaths, coffeeIcon }) => (
-  <div className="coffee-container">
+  <div>
     <Link to={linkPaths} style={{ textDecoration: "none" }}>
       <button type="submit" className="coffee-button">
         <div className="items-wrapper">
