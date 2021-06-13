@@ -14,7 +14,7 @@ function useCoffee(id, description) {
     };
 
     getCoffeeType();
-  }, []);
+  }, [description, id]);
   return coffeeData;
 }
 
