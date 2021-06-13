@@ -1,46 +1,38 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-import axios from "axios";
 import { BiCoffeeTogo } from "react-icons/bi";
+import { IoChevronBackOutline } from "react-icons/io5";
 import Headings from "../../common/Headings/Headings";
 import CoffeeContainer from "../../common/CoffeeContainer/CoffeeContainer";
 
+import { machineLex } from "../../config/coffee-machine-id.json";
+import useCoffee from "../../common/CustomHooks/useCoffee";
+
 import "./Home.scss";
+import Flex from "../../pages/Flex";
 
 function Ristretto() {
-  const [coffeList, setCoffeList] = useState([]);
-
-  useEffect(() => {
-    const getCoffeeType = async () => {
-      try {
-        const { data } = await axios.get("https://darkroastedbeans.coffeeit.nl/coffee-machine/60ba1ab72e35f2d9c786c610");
-        console.log("Coffee", data);
-        setCoffeList(data.types);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    getCoffeeType();
-  }, []);
+  const coffeeList = useCoffee(machineLex, "types");
 
   return (
-    <>
-      <Headings
-        pageHeading="Brew with Lex"
-        pageSubHeading="Select your style"
-      />
-      {coffeList && coffeList.map((coffee) => (
-        <div className="ristretto-container" key={coffee.name}>
-          <CoffeeContainer
-            linkPaths="/size"
-            coffeeInfo={coffee.name}
-            coffeeIcon={<BiCoffeeTogo />}
-          />
-        </div>
-      ))}
-
-    </>
+    <div>
+      <Flex>
+        <Headings
+          arrowIcon={<IoChevronBackOutline />}
+          pageHeading="Brew with Lex"
+          pageSubHeading="Select your style"
+        />
+        {coffeeList && coffeeList.map((coffee) => (
+          <div className="ristretto-container" key={coffee.name}>
+            <CoffeeContainer
+              linkPaths="/size"
+              coffeeInfo={coffee.name}
+              coffeeIcon={<BiCoffeeTogo />}
+            />
+          </div>
+        ))}
+      </Flex>
+    </div>
   );
 }
 

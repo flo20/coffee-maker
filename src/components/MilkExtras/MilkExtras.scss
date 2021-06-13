@@ -1,0 +1,62 @@
+@import "./../../styles/sass/variables.scss";
+
+    .milk-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: $button-width;
+        height: $extra-box-height;
+        background: $primary-color;
+        border-radius: 4px;
+        list-style: none;
+        color: $font-colors;
+        margin-bottom: 1rem;
+    }
+
+    .milk-radio{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: $minibutton-width;
+        height: $minibutton-height;
+        background: $button-background;
+        margin: 0.5rem;
+        border-radius: 8px;
+        text-align: center;  
+    }
+
+    .milk-info{
+       line-height: 5rem;
+    }
+
+    // Radio buttons
+
+    input[type='radio']:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: $primary-color;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+
+    input[type='radio']:checked:after {
+        font-family: 'FontAwesome';
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: white;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }

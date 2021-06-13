@@ -1,26 +1,37 @@
+
+//Button sizes
+$button-height: 100px;
+$button-width: 300px;
+$button-border-radius: 4px;
+
+//Button sizes(smaller)
+$minibutton-height: 56px;
+$minibutton-width: 250px;
+$button-border-radius: 8px;
+
+
 // Colors
-$black: #000000;
-$dark-gray: #454545;
-$gray: #828282;
-$light-color-blue: #f3fcfc;
-$light-color-gray: #f2f2f2;
-$light-color-red:#e9dede;
-$primary-color: #A0000B;
-$primary-shade-light: #AED7A0;
-$primary-shade-dark: #740008;
-$white: #ffffff;
+$button-background:rgba(124, 124, 124, 0.2);;
+$button-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
+$font-colors: #FFFFFF;
+$heading-font-color:#000000;
+$primary-color: #AED7A0;
 
-// Typography
-$button-fontsize: 1.2em;
-$font-weight-semibold: 600;
-$title-fontsize: 2rem;
-
-// Sizes
-$chat-header-height: 100px;
-$button-height: 2.5rem;
-$button-width: 8rem;
+//General
+$border-elements:#FFFFFF;
+$extra-box-height:300px;
 
 // Layout
 $margin: 1rem;
-$navbar-height: 4rem;
 $padding: 1rem;
+
+// Typography
+$button-fontsize: 14px;
+$button-fontweight: 600;
+$heading-font-size: 16px;
+$heading-font-weight: 700;
+$subheading-font-weight: 500;
+$heading-font-height:22px;
+$heading-font-style:normal;
+
+
