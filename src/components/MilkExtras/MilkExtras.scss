@@ -1,27 +1,24 @@
 @import "./../../styles/sass/variables.scss";
 
 .milk-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    list-style: none;
 
     .milk-wrapper{
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        width: 343px;
-        background: $primary-shade-light;
+        width: $button-width;
+        background: $primary-color;
         margin-bottom: 1rem ;
         border-radius: 4px;
+        list-style: none;
+        color: $font-colors;
     }
 
     .milk-radio{
-        width: 301px;
+        width: $minibutton-width;
         height: 56px;
-        background: rgba(124, 124, 124, 0.2);;
+        background: $button-background;
         margin: 0.5rem;
         border-radius: 8px;
         text-align: center;  

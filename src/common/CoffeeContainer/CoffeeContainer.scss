@@ -1,25 +1,19 @@
 @import "./../../styles/sass/variables.scss";
 
-.coffee-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
 .coffee-button{
-    width: 343px;
-    height: 94px;
-    background: $primary-shade-light;
+    width: $button-width;
+    height: $button-height;
+    background: $primary-color;
     border: none;
     border-radius: 4px;
     text-align: center;
     padding: 4px;
-    margin-bottom: 1rem ;
+    margin-bottom: 1.5rem ;
+  
 }
 
 .coffee-font{
-    color: #ffffff;
+    color: $font-colors;
     font-weight: 600;
     font-size: 18px;
 }
