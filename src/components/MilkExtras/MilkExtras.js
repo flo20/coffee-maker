@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 import axios from "axios";
 import { GiIceCubes } from "react-icons/gi";
@@ -14,7 +14,10 @@ const MilkExtras = () => {
   const [milkOption, setMilkOption] = useState([]);
   const [checkedMilkOption, setCheckedMilkOption] = useState("");
 
+  const mounted = useRef(false);
+
   useEffect(() => {
+    mounted.current = true; // Will set it to true on mount ...
     const getCoffeeType = async () => {
       try {
         const { data } = await axios.get("https://darkroastedbeans.coffeeit.nl/coffee-machine/60ba1ab72e35f2d9c786c610");
@@ -27,6 +30,9 @@ const MilkExtras = () => {
     };
 
     getCoffeeType();
+    return () => {
+      mounted.current = false;
+    };
   }, []);
 
   const handleOptionChange = (event) => {
