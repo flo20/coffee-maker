@@ -6,9 +6,8 @@ import Headings from "../../common/Headings/Headings";
 import CoffeeContainer from "../../common/CoffeeContainer/CoffeeContainer";
 
 import { machineLex } from "../../config/coffee-machine-id.json";
-import useCoffee from "../../common/CustomHooks/useCoffee";
+import useCoffee from "../../common/customHooks/useCoffee";
 
-import "./Home.scss";
 import Flex from "../../pages/Flex";
 
 function Ristretto() {

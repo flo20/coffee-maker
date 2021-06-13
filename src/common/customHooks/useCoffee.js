@@ -1,9 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import axios from "axios";
 
-function useCoffee(id, description) {
+const useCoffee = (id, description) => {
   const [coffeeData, setCoffeData] = useState([]);
+
+  const mounted = useRef(false);
+
   useEffect(() => {
+    mounted.current = true; // Will set it to true on mount ...
     const getCoffeeType = async () => {
       try {
         const { data } = await axios.get(`https://darkroastedbeans.coffeeit.nl/coffee-machine/${id}`);
@@ -14,8 +18,11 @@ function useCoffee(id, description) {
     };
 
     getCoffeeType();
+    return () => {
+      mounted.current = false;
+    };
   }, [description, id]);
   return coffeeData;
-}
+};
 
 export default useCoffee;
