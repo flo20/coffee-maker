@@ -55,6 +55,7 @@ const MilkExtras = () => {
                   value={milk.name}
                   checked={checkedMilkOption === milk.name}
                   onChange={handleOptionChange}
+                  className="custom-radio"
                 />
               </div>
             ))}

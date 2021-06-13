@@ -7,10 +7,13 @@ import "./CoffeeContainer.scss";
 
 const CoffeeContainer = ({ coffeeInfo, linkPaths, coffeeIcon }) => (
   <div className="coffee-container">
-    <Link to={linkPaths}>
+    <Link to={linkPaths} style={{ textDecoration: "none" }}>
       <button type="submit" className="coffee-button">
-        {coffeeIcon}
-        <p className="coffee-font">{coffeeInfo}</p>
+        <div className="items-wrapper">
+          <p className="coffee-icon">{coffeeIcon}</p>
+          <p className="coffee-font">{coffeeInfo}</p>
+        </div>
+
       </button>
     </Link>
   </div>
