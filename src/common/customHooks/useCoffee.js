@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+/* eslint-disable no-unused-vars */
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-function useCoffee(id, description) {
+const useCoffee = (id, description) => {
   const [coffeeData, setCoffeData] = useState([]);
+
   useEffect(() => {
     const getCoffeeType = async () => {
       try {
@@ -16,6 +18,6 @@ function useCoffee(id, description) {
     getCoffeeType();
   }, []);
   return coffeeData;
-}
+};
 
 export default useCoffee;
