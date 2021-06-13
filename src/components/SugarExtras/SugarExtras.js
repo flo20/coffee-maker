@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { IoChevronBackOutline } from "react-icons/io5";
 import { GiMilkCarton } from "react-icons/gi";
 import Headings from "../../common/Headings/Headings";
 import CoffeeContainer from "../../common/CoffeeContainer/CoffeeContainer";
@@ -31,7 +32,11 @@ const SugarExtras = () => {
   return (
     <div>
       <Flex>
-        <Headings pageHeading="Brew with Lex" pageSubHeading="Select your extra’s" />
+        <Headings
+          arrowIcon={<IoChevronBackOutline />}
+          pageHeading="Brew with Lex"
+          pageSubHeading="Select your extra’s"
+        />
         <div className="milk-container">
           <div className="milk-wrapper">
             <p>{extraInfo.name}</p>

@@ -1,5 +1,6 @@
 import React from "react";
 import { BiCoffeeTogo } from "react-icons/bi";
+import { IoChevronBackOutline } from "react-icons/io5";
 import Headings from "../../common/Headings/Headings";
 import CoffeeContainer from "../../common/CoffeeContainer/CoffeeContainer";
 
@@ -13,7 +14,11 @@ const CoffeeSize = () => {
   return (
     <div>
       <Flex>
-        <Headings pageHeading="Brew with Lex" pageSubHeading="Select your size" />
+        <Headings
+          arrowIcon={<IoChevronBackOutline />}
+          pageHeading="Brew with Lex"
+          pageSubHeading="Select your size"
+        />
         {coffeeSize && coffeeSize.map((size) => (
           <div key={size.name}>
             <CoffeeContainer

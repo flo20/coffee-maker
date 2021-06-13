@@ -5,5 +5,20 @@
     font-weight: $heading-font-weight;
     font-size: $heading-font-size;
     line-height: $heading-font-height;
+    //padding-left: 10px;
 }
+
+.heading-route{
+    display: flex;
+    align-items: center;
+}
+
+.arrow-icon{
+    padding-right: 1rem;
+
+    &:hover{
+        cursor: pointer;
+     }
+}
+
 

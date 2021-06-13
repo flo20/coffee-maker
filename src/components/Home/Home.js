@@ -1,6 +1,7 @@
 import React from "react";
 
 import { BiCoffeeTogo } from "react-icons/bi";
+import { IoChevronBackOutline } from "react-icons/io5";
 import Headings from "../../common/Headings/Headings";
 import CoffeeContainer from "../../common/CoffeeContainer/CoffeeContainer";
 
@@ -17,6 +18,7 @@ function Ristretto() {
     <div>
       <Flex>
         <Headings
+          arrowIcon={<IoChevronBackOutline />}
           pageHeading="Brew with Lex"
           pageSubHeading="Select your style"
         />

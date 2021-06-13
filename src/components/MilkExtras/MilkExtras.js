@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import axios from "axios";
 import { GiIceCubes } from "react-icons/gi";
+import { IoChevronBackOutline } from "react-icons/io5";
 import CoffeeContainer from "../../common/CoffeeContainer/CoffeeContainer";
 import Headings from "../../common/Headings/Headings";
 
@@ -17,7 +18,7 @@ const MilkExtras = () => {
     const getCoffeeType = async () => {
       try {
         const { data } = await axios.get("https://darkroastedbeans.coffeeit.nl/coffee-machine/60ba1ab72e35f2d9c786c610");
-        console.log("Milk", data);
+        // console.log("Milk", data);
         setMilkInfo(data.extras[1]);
         setMilkOption(data.extras[1].subselections);
       } catch (error) {
@@ -35,7 +36,11 @@ const MilkExtras = () => {
   return (
     <div>
       <Flex>
-        <Headings pageHeading="Brew with Lex" pageSubHeading="Select your extra’s" />
+        <Headings
+          arrowIcon={<IoChevronBackOutline />}
+          pageHeading="Brew with Lex"
+          pageSubHeading="Select your extra’s"
+        />
         <div className="milk-container">
           <div className="milk-wrapper">
             <p>

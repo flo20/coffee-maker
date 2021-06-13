@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Headings from "../../common/Headings/Headings";
+
 import startIcon from "../../assets/Vector.svg";
 
 import "./StartCoffee.scss";
@@ -9,10 +9,9 @@ import Flex from "../../pages/Flex";
 const StartCoffee = () => (
   <div>
     <Flex>
-      <Headings
-        pageHeading="Dark Roasted Beans"
-        pageSubHeading="Tab the machine to start"
-      />
+      <h1 className="start-heading">Dark Roasted Beans</h1>
+      <p>Tab the machine to start</p>
+
       <img src={startIcon} alt="startIcon" className="scan-icon" />
       <p className="scan-instructions">How does this work</p>
       <Link to="/home">
