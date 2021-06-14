@@ -2,12 +2,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { useHistory } from "react-router-dom";
-import "./Header.scss";
+import "./Headings.scss";
 
 const Headings = ({ pageHeading, pageSubHeading, arrowIcon }) => {
   const history = useHistory();
-  return (
 
+  return (
     <div>
       <div className="heading-route">
         <p

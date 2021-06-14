@@ -7,6 +7,7 @@ import CoffeeContainer from "../../common/CoffeeContainer/CoffeeContainer";
 import Flex from "../../pages/Flex";
 
 const CoffeeExtras = () => (
+
   <div>
     <Flex>
       <Headings
@@ -26,8 +27,8 @@ const CoffeeExtras = () => (
         linkPaths="/sugar-details"
       />
     </Flex>
-
   </div>
+
 );
 
 export default CoffeeExtras;

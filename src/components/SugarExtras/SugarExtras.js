@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useEffect, useState, useRef } from "react";
+
 import { IoChevronBackOutline } from "react-icons/io5";
 import { GiMilkCarton } from "react-icons/gi";
+import getExtraData from "../../common/getExtraData/getExtraData";
+
 import Headings from "../../common/Headings/Headings";
 import CoffeeContainer from "../../common/CoffeeContainer/CoffeeContainer";
 import Flex from "../../pages/Flex";
@@ -9,24 +11,30 @@ import Flex from "../../pages/Flex";
 const SugarExtras = () => {
   const [extraInfo, setExtraInfo] = useState("");
   const [sugarOption, setSugarOption] = useState([]);
-  const [extraOption, setExtraOption] = useState("");
+  const [checkedSugarOption, setCheckedSugarOption] = useState("");
+
+  const mounted = useRef(false);
 
   useEffect(() => {
-    const getCoffeeType = async () => {
+    mounted.current = true; // Will set it to true on mount ...
+    const getCoffeeExtras = async () => {
       try {
-        const { data } = await axios.get("https://darkroastedbeans.coffeeit.nl/coffee-machine/60ba1ab72e35f2d9c786c610");
-        setExtraInfo(data.extras[0]);
-        setSugarOption(data.extras[0].subselections);
+        const extraData = await getExtraData();
+        setExtraInfo(extraData.extras[0]);
+        setSugarOption(extraData.extras[0].subselections);
       } catch (error) {
         console.error(error);
       }
     };
 
-    getCoffeeType();
+    getCoffeeExtras();
+    return () => {
+      mounted.current = false;
+    };
   }, []);
 
   const handleOptionChange = (event) => {
-    setExtraOption(event.currentTarget.value);
+    setCheckedSugarOption(event.currentTarget.value);
   };
 
   return (
@@ -46,7 +54,7 @@ const SugarExtras = () => {
                 type="radio"
                 name="extra-option"
                 value={sugar.name}
-                checked={extraOption === sugar.name}
+                checked={checkedSugarOption === sugar.name}
                 onChange={handleOptionChange}
               />
             </div>

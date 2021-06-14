@@ -1,8 +1,8 @@
 import React from "react";
+
 import { Link } from "react-router-dom";
 
 import startIcon from "../../assets/Vector.svg";
-
 import "./StartCoffee.scss";
 import Flex from "../../pages/Flex";
 
@@ -14,7 +14,7 @@ const StartCoffee = () => (
 
       <img src={startIcon} alt="startIcon" className="scan-icon" />
       <p className="scan-instructions">How does this work</p>
-      <Link to="/home">
+      <Link to="/style">
         <button type="submit" className="start-button">Start</button>
       </Link>
     </Flex>

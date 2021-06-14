@@ -8,6 +8,7 @@ const useCoffee = (id, description) => {
 
   useEffect(() => {
     mounted.current = true; // Will set it to true on mount ...
+
     const getCoffeeType = async () => {
       try {
         const { data } = await axios.get(`https://darkroastedbeans.coffeeit.nl/coffee-machine/${id}`);
@@ -16,12 +17,13 @@ const useCoffee = (id, description) => {
         console.log(error);
       }
     };
-
     getCoffeeType();
+
     return () => {
       mounted.current = false;
     };
   }, [description, id]);
+
   return coffeeData;
 };
 

@@ -2,15 +2,14 @@ import React from "react";
 
 import { BiCoffeeTogo } from "react-icons/bi";
 import { IoChevronBackOutline } from "react-icons/io5";
+import useCoffee from "../../common/customHooks/useCoffee";
+import { machineLex } from "../../config/coffee-machine-id.json";
+
 import Headings from "../../common/Headings/Headings";
 import CoffeeContainer from "../../common/CoffeeContainer/CoffeeContainer";
-
-import { machineLex } from "../../config/coffee-machine-id.json";
-import useCoffee from "../../common/customHooks/useCoffee";
-
 import Flex from "../../pages/Flex";
 
-function Ristretto() {
+function CoffeeStyle() {
   const coffeeList = useCoffee(machineLex, "types");
 
   return (
@@ -35,4 +34,4 @@ function Ristretto() {
   );
 }
 
-export default Ristretto;
+export default CoffeeStyle;
