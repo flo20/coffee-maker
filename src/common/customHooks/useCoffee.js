@@ -11,7 +11,11 @@ const useCoffee = (id, description) => {
 
     const getCoffeeType = async () => {
       try {
-        const { data } = await axios.get(`https://darkroastedbeans.coffeeit.nl/coffee-machine/${id}`);
+        const { data } = await axios.get(`https://darkroastedbeans.coffeeit.nl/coffee-machine/${id}`, {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
         setCoffeData(data[description]);
       } catch (error) {
         console.log(error);
