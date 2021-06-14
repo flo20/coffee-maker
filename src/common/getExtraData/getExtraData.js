@@ -1,5 +1,5 @@
 import axios from "axios";
-import { machineLex } from "../config/coffee-machine-id.json";
+import { machineLex } from "../../config/coffee-machine-id.json";
 
 const getExtraData = async () => {
   try {

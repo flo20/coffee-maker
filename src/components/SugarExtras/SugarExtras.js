@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 
 import { IoChevronBackOutline } from "react-icons/io5";
 import { GiMilkCarton } from "react-icons/gi";
-import getExtraData from "../../common/getExtraData";
+import getExtraData from "../../common/getExtraData/getExtraData";
 
 import Headings from "../../common/Headings/Headings";
 import CoffeeContainer from "../../common/CoffeeContainer/CoffeeContainer";
