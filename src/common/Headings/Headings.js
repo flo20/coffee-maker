@@ -1,7 +1,8 @@
 /* eslint-disable react/require-default-props */
 import React from "react";
-import PropTypes from "prop-types";
 import { useHistory } from "react-router-dom";
+import PropTypes from "prop-types";
+
 import "./Headings.scss";
 
 const Headings = ({ pageHeading, pageSubHeading, arrowIcon }) => {
