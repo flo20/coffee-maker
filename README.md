@@ -1,6 +1,10 @@
 # COFFEE MAKER
 
-A fictitious coffee bar with a coffee machine with which you can connect via NFC and compose your coffee via this app.
+A fictitious coffee bar with a coffee machine with which you can connect via NFC and compose your coffee via this app. 
+
+### `Demo`
+
+See demo on loom [app demo](https://www.loom.com/share/88cb1936ef704b86bb8fdf6279d1c6ab) for more information.
 
 ### How to access app locally
 
