@@ -1,5 +1,6 @@
 /* eslint-disable react/require-default-props */
 import React from "react";
+
 import PropTypes from "prop-types";
 
 import "./Flex.scss";
@@ -12,6 +13,5 @@ const Flex = ({ children }) => (
 
 Flex.propTypes = {
   children: PropTypes.node,
-
 };
 export default Flex;

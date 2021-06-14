@@ -1,5 +1,6 @@
 @import "./../../styles/sass/variables.scss";
 
+// Milk box
     .milk-wrapper{
         display: flex;
         justify-content: center;
@@ -22,15 +23,11 @@
         height: $minibutton-height;
         background: $button-background;
         margin: 0.5rem;
-        border-radius: 8px;
+        border-radius: $minibutton-border-radius;
         text-align: center;  
     }
 
-    .milk-info{
-       line-height: 5rem;
-    }
-
-    // Radio buttons
+    // Custom radio buttons
 
     input[type='radio']:after {
         width: 15px;

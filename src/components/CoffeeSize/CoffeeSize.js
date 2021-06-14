@@ -1,11 +1,12 @@
 import React from "react";
+
 import { BiCoffeeTogo } from "react-icons/bi";
 import { IoChevronBackOutline } from "react-icons/io5";
-import Headings from "../../common/Headings/Headings";
-import CoffeeContainer from "../../common/CoffeeContainer/CoffeeContainer";
-
 import useCoffee from "../../common/customHooks/useCoffee";
 import { machineLex } from "../../config/coffee-machine-id.json";
+
+import Headings from "../../common/Headings/Headings";
+import CoffeeContainer from "../../common/CoffeeContainer/CoffeeContainer";
 import Flex from "../../pages/Flex";
 
 const CoffeeSize = () => {

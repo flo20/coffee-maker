@@ -1,13 +1,14 @@
 import React, { useEffect, useState, useRef } from "react";
 
-import axios from "axios";
 import { GiIceCubes } from "react-icons/gi";
 import { IoChevronBackOutline } from "react-icons/io5";
+import getExtraData from "../../common/getExtraData";
+
 import CoffeeContainer from "../../common/CoffeeContainer/CoffeeContainer";
 import Headings from "../../common/Headings/Headings";
+import Flex from "../../pages/Flex";
 
 import "./MilkExtras.scss";
-import Flex from "../../pages/Flex";
 
 const MilkExtras = () => {
   const [milkInfo, setMilkInfo] = useState("");
@@ -18,18 +19,17 @@ const MilkExtras = () => {
 
   useEffect(() => {
     mounted.current = true; // Will set it to true on mount ...
-    const getCoffeeType = async () => {
+    const getCoffeeExtras = async () => {
       try {
-        const { data } = await axios.get("https://darkroastedbeans.coffeeit.nl/coffee-machine/60ba1ab72e35f2d9c786c610");
-        // console.log("Milk", data);
-        setMilkInfo(data.extras[1]);
-        setMilkOption(data.extras[1].subselections);
+        const extraData = await getExtraData();
+        setMilkInfo(extraData.extras[1]);
+        setMilkOption(extraData.extras[1].subselections);
       } catch (error) {
         console.error(error);
       }
     };
 
-    getCoffeeType();
+    getCoffeeExtras();
     return () => {
       mounted.current = false;
     };
@@ -67,13 +67,12 @@ const MilkExtras = () => {
             </div>
           ))}
         </div>
-        <div>
-          <CoffeeContainer
-            coffeeIcon={<GiIceCubes />}
-            coffeeInfo="Sugar"
-            linkPaths="/sugar-details"
-          />
-        </div>
+
+        <CoffeeContainer
+          coffeeIcon={<GiIceCubes />}
+          coffeeInfo="Sugar"
+          linkPaths="/sugar-details"
+        />
 
       </Flex>
 
