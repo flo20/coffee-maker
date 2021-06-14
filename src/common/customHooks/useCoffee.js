@@ -11,7 +11,7 @@ const useCoffee = (id, description) => {
 
     const getCoffeeType = async () => {
       try {
-        const { data } = await axios.get(`/${id}`);
+        const { data } = await axios.get(`https://cors-anywhere.herokuapp.com/https://darkroastedbeans.coffeeit.nl/coffee-machine/${id}`);
         setCoffeData(data[description]);
       } catch (error) {
         console.log(error);

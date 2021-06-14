@@ -3,7 +3,7 @@ import { machineLex } from "../../config/coffee-machine-id.json";
 
 const getExtraData = async () => {
   try {
-    const { data } = await axios.get(`/${machineLex}`);
+    const { data } = await axios.get(`https://cors-anywhere.herokuapp.com/https://darkroastedbeans.coffeeit.nl/coffee-machine/${machineLex}`);
     return data;
   } catch (error) {
     return error;
